@@ -2890,9 +2890,7 @@ addTextEdit("ParcelID", storage.ParcelID, function(widget, text)
     local newId = tonumber(text)
     if newId then
         storage.ParcelID = newId
-        print("Nuevo Parcel ID guardado: " .. newId)
     else
-        print("Error: Ingresa un numero valido.")
     end
 end)
 
@@ -2902,7 +2900,6 @@ function getParcelUnder()
   if tile then
     for _, item in ipairs(tile:getItems()) do
       if item:getId() == storage.ParcelID then
-        print(tile:getElevation())
         return item
       end
     end
